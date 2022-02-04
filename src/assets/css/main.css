@@ -1,275 +1,77 @@
-.calcWrapper {
-    max-width: 1120px;
-    display: flex;
-    margin: 0 auto;
-    min-height: 668px;
-    position: relative;
+.warp_body{
+    background-color: #fdd6e5;
+
 }
-.calcWrapper:before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 65px;
+
+.cont{
+    max-width:1200px;
+    margin-right: auto;
+    margin-left: auto;
     width: 100%;
-    height: 95%;
-    background: #CE8AB6;
-    border-radius: 30px;
-}
-.calcLeftBlock {
-    width: 50%;
-    background-color: #D39CCD;
-    /* position: relative; */
-    overflow: hidden;
+    height: 100%;
+    padding-right: .75rem;
+    padding-left: .75rem;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
-.calcLeftBlockImg {
+
+.block_1{
     border-radius: 30px;
-    background: url(https://kdm1.ru/local/img/epil12.png)no-repeat;
-    background-size: cover;
-    background-position: center;
-    /* border: 1px solid; */
-    /* overflow: hidden; */
-    height: 100%;
-    position: relative;
-    z-index: 2;
-}
-.calcLeftBlockImg:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 99.6%;
-    height: 99.7%;
-    border: 1px solid;
-    z-index: 2;
-    border-radius: 30px;
-}
-.listImgLeft {
-    position: absolute;
-    left: -8px;
-    top: -47px;
-    border-top-left-radius: 117px;
+    background-color: #ffe9ed;
+    height: 517px;
     overflow: hidden;
-    z-index: 2;
 }
-.calcLeftBlock img {
-    width: auto;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
+
+.img-round{
     border-radius: 30px;
 }
-.vkrDropTop {
-    padding: 10px 20px;
-    font-size: 21px;
-    font-weight: 300;
-    color: #2e1b3e;
-    border-bottom: 1px solid #2e1b3e;
-    cursor: pointer;
-    position: relative;
-}
-.vkrDropTop:before {
-    content: '▼';
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translate(-50%, 0);
-    color: #2E1B3E;
-    font-size: 13px;
-}
-.calcRightBlock {
-    width: 50%;
-    margin-top: 50px;
-    padding: 0px 50px;
-    border: 1px solid;
-    border-radius: 0 30px 30px 0;
-    /*transform: translate(0px, -4px);*/
-    border-left: 0;
-    background: #FFEAEE;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    font-family: 'Ubuntu',Arial,sans-serif;
-}
-.calcRightBlock:before {
-    content: '';
-    position: absolute;
-    left: -30px;
-    width: 30px;
-    height: 30px;
-    background: #ffeaee;
-    top: -1px;
-    z-index: 1;
-    border-top: 1px solid;
-}
-.calcRightBlock:after {
-    content: '';
-    position: absolute;
-    left: -30px;
-    width: 30px;
-    height: 30px;
-    background: #ffeaee;
-    bottom: -1px;
-    z-index: 1;
-    border-bottom: 1px solid;
-}
-.vkrDropDown {
-    /*padding: 10px 0;*/
-    border-bottom: 1px solid #2e1b3e;
-    border-top: none;
-}
-.vkrDropDownBlock {
-    padding: 15px 20px;
-    font-size: 21px;
-    font-weight: 300;
-    color: #2e1b3e;
-    cursor: pointer;
-}
-.vkrDropDownBlock:not(:last-child) {
-    border-bottom: 1px solid #2e1b3e;
-}
-.vkrDropDownBlock:hover {
-    background: #FFC9DE;
-}
-.vkrUslugaBlock {
-    position: relative;
-}
-.vkrUslugaPrice {
-    position: absolute;
-    top: 0;
-    right: 50px;
-    padding: 10px 20px;
-    font-size: 21px;
-    font-weight: 300;
-    height: 23px;
-    width: 50px;
-    /*border: 1px solid;*/
-}
-.vkrUslugaItem {
-    padding: 10px 20px;
-    font-size: 21px;
-    font-weight: 300;
-    color: #2e1b3e;
-    border-bottom: 1px solid #2e1b3e;
-    cursor: pointer;
-}
-.vkeUslugaWrap {
-    position: relative;
-    padding-bottom: 120px;
-    border-bottom: 2px solid;
-}
-.addBlockUslugi {
-    padding: 22px 20px;
-    font-size: 21px;
-    font-weight: 300;
-    color: #2e1b3e;
-    border: 1px dashed;
-    cursor: pointer;
-    width: calc(100% - 42px);
-    position: absolute;
-    bottom: 24px;
-    text-align: center;
-}
-.fullPriceAll,
-.fullPriceAllSale{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0px;
-    font-size: 21px;
-    color: #2e1b3e;
-    margin-top: 20px;
-    font-weight: bold;
-}
-.saleFirstBlock {
-    padding: 10px 0;
-    font-size: 21px;
-    font-weight: 300;
-    color: #2e1b3e;
-    border-top: 2px solid #2e1b3e;
-    cursor: pointer;
-    margin-top: 20px;
-}
-.checkListWrap {
-    margin-top: 20px;
-}
-.checkListWrapTitle {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-.checkListItem {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.titleCalcTop {
-    font-size: 32px;
-    line-height: 41px;
-    color: #2E1B3E;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-.calcRightBottom{
-    width: 100%;
-}
-.submitCalcButton {
-    color: #ffffff;
-    border: 1px solid #2e1b3e;
-    background-color: #e684aa;
-    border-radius: 10px;
+
+.title_h1{
+    color: #2e1a3d;
+    font-size: 36px;
+    line-height: 1.20;
     font-weight: 400;
-    font-size: 21px;
-    width: 95%;
-    height: 70px;
-    padding: 0 15px;
+}
+
+.warp_img{
+    padding-right: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    cursor: pointer;
+    justify-content: end;
 }
-#form399269539{
-    display: none;
+
+.pl-60{
+    padding-left: 60px;
 }
-.inputBlockInput input {
-    padding: 10px 20px;
-    font-size: 21px;
-    font-weight: 300;
+
+
+
+
+.bt_index{
+    width: 365px;
+    height: 89px;
     color: #2e1b3e;
-    border: none;
-    border-bottom: 2px solid #2e1b3e;
-    cursor: pointer;
-    position: relative;
-    width: 95%;
-    background: none;
-    margin-bottom: 10px;
-    font-family: 'Ubuntu',Arial,sans-serif;
     font-size: 21px;
-    color: #2e1b3e;
+    line-height: 1.50;
+    font-weight: 400;
+    border-width: 1px;
+    border-radius: 30px;
+    background-color: #fdacbb;
+    background-position: center center;
+    border-color: #2e1a3d;
+    border-style: solid;
+    margin-top: 60px;
+    -webkit-box-shadow: 7px 10px 0px 0px rgba(230, 132, 170, 1);
+    -moz-box-shadow: 7px 10px 0px 0px rgba(230, 132, 170, 1);
+    box-shadow: 7px 10px 0px 0px rgba(230, 132, 170, 1);
+    transition: .2s;
 }
-.inputBlockInput input::placeholder{
-    font-family: 'Ubuntu',Arial,sans-serif;
-    font-size: 21px;
-    color: #2e1b3e;
+
+.bt_index:hover{
+    -webkit-box-shadow: 4px 6px 0px 0px rgba(230, 132, 170, 1);
+    -moz-box-shadow: 4px 6px 0px 0px rgba(230, 132, 170, 1);
+    box-shadow: 4px 6px 0px 0px rgba(230, 132, 170, 1);
 }
-.inputBlockInput input.vkrErr {
-    outline-color: #ce0000;
-    border: 2px solid #ce0000;
-}
-.removeBlock {
-    position: absolute;
-    right: -10px;
-    top: 10px;
-    font-size: 50px;
-    line-height: 0px;
-    z-index: 2;
-    cursor: pointer;
-    display: none;
-}
-.vkrUslugaBlock.dopUsluga .removeBlock {
-    display: block;
-}
+
 
 .bt{
     border: 1px solid #2E1B3E;
