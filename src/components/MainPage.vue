@@ -2,21 +2,19 @@
   <div class="warp_body">
     <div class="cont">
       <div class="block_1">
-        <div class="cont">
-          <div class="row align-content-center">
-            <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="row align-content-center">
+          <div class="col-md-6 d-flex flex-column justify-content-center">
               <div class="pl-60">
               <div class="title_h1">Рассчитайте стоимость услуг в удобном калькуляторе</div>
               <button class="bt_index" @click="showModal">Рассчитать стоимость</button>
               </div>
-            </div>
-            <div class="col-md-6 warp_img">
-              <img class="img-round" src="../assets/i/image_15.webp" alt="">
-            </div>
+          </div>
+          <div class="col-md-6 warp_img">
+              <img class="img-round" src="https://script.kdm1.ru/epiliumclinic/dist/img/i.webp" alt="">
           </div>
         </div>
       </div>
-      </div>
+    </div>
     <div class="warp_model" :class="{active: isActive}">
       <div class="modal_body" :class="classObject">
         <div class="close_model" @click="showModal">
@@ -27,7 +25,7 @@
         </div>
         <div class="container-fluid">
           <div class="row" v-if="currentStep == 1">
-            <div class="col">
+            <div class="col-12 col-md-4">
               <div class="title mb-3">Укажите ваш пол</div>
 
               <input type="radio" id="man" value="man" v-model="floor" />
@@ -85,7 +83,7 @@
                 </span>
               </label>
             </div>
-            <div class="col">
+            <div class="col-12 col-md-4">
               <div class="warp_choose_zone"  :class="{active: isShowChooseZone}">
                 <div class="title mb-3">Выберите зону</div>
                 <div class="row ">
@@ -168,7 +166,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-md-4">
               <div class="warp_selected_services" :class="{active: isSelectedServices}">
                 <div class="d-flex flex-column justify-content-between h-100">
                   <div class="warp-select_services">
@@ -215,7 +213,7 @@
             </div>
           </div>
           <div class="row" v-if="currentStep == 2">
-            <div class="col-8">
+            <div class="col-12 col-md-8 mb-5 mb-md-0">
               <div class="title">Укажите ваши контактные данные</div>
               <div class="sub_title">
                 Менеджер перезвонит вам для подтверждения заказа
@@ -238,7 +236,7 @@
                 </div>
               </Form>
             </div>
-            <div class="col-4 warp_result">
+            <div class="col-12 col-md-4 warp_result">
               <div class="title mb-4">Выбранные услуги</div>
               <div class="col mb-2" v-for="service in storeService" :key="service.code">
                 <div class="d-flex justify-content-between" :id="service.code">
@@ -2021,7 +2019,7 @@ export default {
       console.log(this.$store.state.services);
       console.log(this.allPrice);
 
-      const data = { form: values, servise:this.$store.state.services, price: this.allPrice};
+      const data = { form: values, floor:this.floor, laser:this.laser, servise:this.$store.state.services, price: this.allPrice};
       /*const data={'form':1}
       const headers = {
         'Accept': 'application/json',
